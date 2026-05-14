@@ -1,8 +1,11 @@
+import Welcome from "../features/landing/components/Welcome";
 
 export default function Home() {
+
+
   return (
-    <div>
-        <h1>Innerspace Journal</h1>
-    </div>
+    <main className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sanctuary-50">
+      <Welcome/>
+    </main>
   );
 }

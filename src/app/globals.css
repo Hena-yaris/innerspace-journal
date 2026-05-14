@@ -1,1 +1,55 @@
 @import "tailwindcss";
+
+@theme {
+  /*  Brand colors */
+  --color-sanctuary-50: #F5F2EA;
+  --color-sanctuary-100: #EDE6D9;
+  --color-sanctuary-200: #D8D2C4;
+  --color-sanctuary-300: #AAB7AF;
+  --color-sanctuary-400: #8FA094;
+  --color-sanctuary-500: #7E8F84;
+  --color-sanctuary-600: #5F6E64;
+  --color-sanctuary-700: #3F4A45;
+
+  /*  Brand Fonts */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /*  Border Radius */
+  --radius-sanctuary: 24px;
+  --radius-input: 9999px;
+
+  --shadow-sanctuary: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-button: 0 6px 16px rgba(126, 143, 132, 0.25);
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer components {
+  .modal-overlay-fade {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  .modal-content-pop {
+    animation: modalPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes modalPop {
+    from { 
+      opacity: 0; 
+      transform: scale(0.95) translateY(10px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1) translateY(0); 
+    }
+  }
+}
