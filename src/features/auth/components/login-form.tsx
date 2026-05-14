@@ -12,6 +12,11 @@ export default function LoginForm() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
+  const DEMO_USER = {
+    email: "demo@innerspace.com",
+    password: "demo123",
+  };
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
@@ -37,6 +42,37 @@ export default function LoginForm() {
       setTimeout(() => {
         router.push("/");
       }, 2000);
+    } catch (err: any) {
+      setError(err.message);
+      setIsLoading(false);
+    }
+  }
+
+
+  async function handleDemoLogin() {
+    try {
+      setError(null);
+      setIsLoading(true);
+
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(DEMO_USER),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Demo login failed");
+      }
+
+      setIsSuccess(true);
+
+      setTimeout(() => {
+        router.push("/");
+      }, 1500);
     } catch (err: any) {
       setError(err.message);
       setIsLoading(false);
@@ -77,7 +113,7 @@ export default function LoginForm() {
               <span className="text-sanctuary-600">stillness.</span>
               {/* Sub-greeting */}
               <span className="block mt-4 text-[11px] font-bold uppercase tracking-[0.4em] text-sanctuary-400">
-                 • Your Spirit’s Sanctuary
+                • Your Spirit’s Sanctuary
               </span>
             </h1>
           </div>
@@ -135,6 +171,17 @@ export default function LoginForm() {
                 )}
               </span>
             </button>
+
+            <button
+              type="button"
+              onClick={handleDemoLogin}
+              disabled={isLoading}
+              className="w-full py-3 rounded-2xl border border-sanctuary-300/40 bg-white/40 text-sanctuary-700 font-medium text-sm hover:bg-white/60 transition-all duration-300 disabled:opacity-50"
+            >
+              Try Demo Account
+            </button>
+
+            
           </form>
 
           <div className="mt-8 flex flex-col items-center gap-2">
