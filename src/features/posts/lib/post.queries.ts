@@ -8,3 +8,12 @@ export async function getCategories() {
 
   return categories || [];
 }
+
+
+export async function getPostBySlug(slug: string) {
+  await connectDB();
+
+  const post = await Post.findOne({ slug }).lean();
+
+  return post;
+}
