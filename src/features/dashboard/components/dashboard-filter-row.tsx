@@ -40,11 +40,9 @@ export default function DashboardFilterRow({ activeFilter, categories }: FilterR
               `}
             >
               {item}
-              {/* The Underline for active state */}
               {isActive && (
                 <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-sanctuary-600 rounded-full animate-in zoom-in-x duration-500" />
               )}
-              {/* Subtle hover dot */}
               {!isActive && (
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-sanctuary-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
               )}

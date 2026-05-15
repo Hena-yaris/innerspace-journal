@@ -37,8 +37,8 @@ export default function AvatarDropdown({ user }: { user: any }) {
   }
 
   //user database  values
-  const displayName = user?.name || "Lule";
-  const displayEmail = user?.email || "luel@gmail.com";
+  const displayName = user?.name || "Yared";
+  const displayEmail = user?.email || "yared@gmail.com";
   const displayBio = user?.bio || "በመኑ በአምሳለ መኑ አስተማስለኪ";
   const displayImage = user?.image || "/images/login-bg.jpg";
 

@@ -30,7 +30,6 @@ export default function Loading() {
 
       {/* 4. The Grid of Skeletons */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 mt-6">
-        {/* We show 8 skeletons to fill the screen */}
         {Array.from({ length: 8 }).map((_, i) => (
           <PostSkeleton key={i} />
         ))}

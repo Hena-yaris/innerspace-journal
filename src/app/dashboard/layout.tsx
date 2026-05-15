@@ -21,19 +21,15 @@ export default function DashboardLayout({
           },
         }}
       />
-      {/* 1. Base Brand Color (The Foundation) */}
       <div className="fixed inset-0 z-[-2] bg-sanctuary-50" />
 
-      {/* 2. The Texture Layer (The Image) */}
       <div
         className="fixed inset-0 z-[-1] bg-cover bg-center opacity-[0.03] pointer-events-none grayscale"
         style={{ backgroundImage: "url('/images/lo-bg.jpg')" }}
       />
 
-      {/* 3. The Lighting Layer (The Vignette) */}
       <div className="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(245,242,234,0.15)_100%)]" />
 
-      {/* 4. The Content Area (The Words) */}
       <div className="relative z-10">{children}</div>
     </div>
   );

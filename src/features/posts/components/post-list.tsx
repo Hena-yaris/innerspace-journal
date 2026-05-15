@@ -25,7 +25,7 @@ export default function PostList({ posts }: { posts: Post[] }) {
           <Feather size={28} strokeWidth={1} className="animate-pulse" />
         </div>
         <h3 className="text-xl font-serif italic text-sanctuary-800">
-          The silence is waiting, Etsub...
+          The silence is waiting, Henok...
         </h3>
         <p className="text-xs text-sanctuary-400 mt-3 max-w-[250px] tracking-wide leading-relaxed">
           No manuscripts have ascended yet. Shall we capture a new reflection?

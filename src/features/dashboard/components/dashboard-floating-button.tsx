@@ -20,7 +20,6 @@ export default function DashboardFloatingButton() {
           group-hover:rounded-[2.5rem]
         "
       >
-        {/* The Icon */}
         <div className="relative">
           <Plus
             size={32}
@@ -32,7 +31,6 @@ export default function DashboardFloatingButton() {
           />
         </div>
 
-        {/* Inner Glow f */}
         <div className="absolute inset-0 rounded-inherit border border-white/20 pointer-events-none" />
       </Link>
 
@@ -49,7 +47,6 @@ export default function DashboardFloatingButton() {
         "
       >
         Begin Ascent
-        {/* The small arrow tail */}
         <div className="absolute right-[-5px] top-1/2 -translate-y-1/2 rotate-45 w-2.5 h-2.5 bg-white/80 border-r border-t border-sanctuary-100" />
       </div>
     </div>
