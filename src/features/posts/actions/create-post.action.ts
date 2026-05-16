@@ -11,7 +11,10 @@ export async function createPost(formData: FormData) {
   await connectDB();
 
   const title = formData.get("title") as string;
-  const category = formData.get("category") as string;
+  let category = formData.get("category") as string;
+  if (!category || category.trim() === "") {
+    category = "Uncategorized";
+  }
   const contentRaw = formData.get("content") as string;
   const isDraft = formData.get("isDraft") === "true";
 
