@@ -1,4 +1,4 @@
-#Innerspace
+# Innerspace Journal
 
 A private digital sanctuary for reflective writing, protected thoughts, and timeless manuscripts.
 
