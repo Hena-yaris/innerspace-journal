@@ -1,5 +1,5 @@
-# InnerSpace
+#Innerspace
 
-A modern full-stack journaling platform for private thoughts, poems, and reflections.
+A private digital sanctuary for reflective writing, protected thoughts, and timeless manuscripts.
 
-Built with Next.js, TypeScript, and Tailwind CSS.
+Built with Next.js, TypeScript, MongoDB, JWT authentication, and a feature-based architecture.
