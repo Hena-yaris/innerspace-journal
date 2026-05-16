@@ -176,7 +176,7 @@ export default function LoginForm() {
               type="button"
               onClick={handleDemoLogin}
               disabled={isLoading}
-              className="w-full py-3 rounded-2xl border border-sanctuary-300/40 bg-white/40 text-sanctuary-700 font-medium text-sm hover:bg-white/60 transition-all duration-300 disabled:opacity-50"
+              className="w-full py-3 rounded-2xl border border-sanctuary-300/40 bg-white/40 text-sanctuary-700 font-medium text-sm hover:bg-white/60 transition-all duration-300 disabled:opacity-50 cursor-pointer"
             >
               Try Demo Account
             </button>
